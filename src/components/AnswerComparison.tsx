@@ -63,7 +63,7 @@ export function AnswerComparison({
   };
 
   const renderCorrectSentence = () => {
-    if (isCorrect || !masked || typeof userAnswer === "string") {
+    if (isCorrect || !masked || typeof userAnswer === "string" || !userAnswer) {
       return (
         <div className="answer-line answer-correct">
           <span className="answer-icon">📖</span>
