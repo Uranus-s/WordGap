@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><body>
+<h2>Testing Tatoeba Proxy Fetch</h2>
+<div id="out"></div>
+<script type="module">
+const out = document.getElementById('out');
+out.innerHTML = 'Fetching via proxy...\n';
+
+try {
+  const url = '/api/tatoeba/en/sentences/search?query=common&from=eng&to=cmn&sort=relevance';
+  const response = await fetch(url);
+  out.innerHTML += 'Status: ' + response.status + ' ' + response.statusText + '\n';
+  out.innerHTML += 'OK: ' + response.ok + '\n';
+  const html = await response.text();
+  out.innerHTML += 'HTML length: ' + html.length + '\n';
+  out.innerHTML += 'vm.init count: ' + (html.match(/vm\.init/g) || []).length + '\n';
+  out.innerHTML += 'SUCCESS!';
+} catch(e) {
+  out.innerHTML += 'ERROR: ' + e.message + '\n';
+}
+</script>
+</body></html>

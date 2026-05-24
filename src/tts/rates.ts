@@ -1,0 +1,1 @@
+export const RATES = [0.5, 1, 1.5, 2, 2.5, 3] as const;
