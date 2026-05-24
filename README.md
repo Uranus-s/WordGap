@@ -1,3 +1,7 @@
+<p align="right">
+  <a href="README.md">English</a> | <a href="README_CN.md">中文</a>
+</p>
+
 <p align="center">
   <h1 align="center">WordGap</h1>
   <p align="center"><strong>Stop memorizing. Start remembering.</strong></p>
